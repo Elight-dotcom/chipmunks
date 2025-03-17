@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../output.css" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/tailwindcss">
+        @theme {
+            --color-teks-ipt: #00000070;
+            --color-primary: #AE4562;
+            --color-secondary: #245581;
+            --color-secondary-light: #5890C9;
+            --color-primary-dull: #F5EFF2;
+            --font-display-poppin: "Poppins";
+        }
+    </style>
+</head>
+<body class="font-display-poppin overflow-hidden bg-primary-dull">
+    <div>
+        <div class="w-full h-full">
+            <img class="w-130 h-130 absolute top-0 bottom-0 m-auto left-0 right-0 -z-30 opacity-50" src="../images/bgSignin.png" alt="">
+        </div>
+        <header class="pt-10 ml-15 flex flex-row items-center">
+            <svg onclick="history.back()" class="w-[15px] h-[32px] cursor-pointer hover:scale-130 duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 42" fill="none">
+                <path d="M21.7718 39.4399L3.51315 21.718C3.23225 21.4454 3.23225 20.9945 3.51315 20.7219L21.7718 3" stroke="#245581" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+            <h1 class="ml-5 text-3xl font-bold text-secondary">Go Back</h1>
+        </header>
+        <div class="flex justify-center items-center h-screen">
+            <section class="bg-[#D9d9d9] p-5 mb-30 items-center justify-center gap-5 left-0 right-0 mx-auto w-180 rounded-3xl">
+                <input class="focus:ring-0 focus:border-0 focus:outline-0 pb-60" type="text" placeholder="Type Here">
+                <div class="justify-between">
+                    <div class="text-[#00000050] text-xl space-x-3">
+                        <label class="cursor-pointer hover:scale-110 hover:text-black duration-300" for="img">
+                            <i class="fa-solid fa-image"></i>
+                        </label>
+                        <label class="cursor-pointer hover:scale-110 hover:text-black duration-300" for="file">
+                            <i class="fa-solid fa-file"></i>
+                        </label>
+                        <label class="cursor-pointer hover:scale-110 hover:text-black duration-300" for="link">
+                            <i class="fa-solid fa-link"></i>
+                        </label>
+                        <input class="hidden" type="file" name="img" id="img">
+                        <input class="hidden" type="file" name="img" id="file">
+                        <input class="hidden" type="file" name="img" id="link">
+                    </div>
+                    <div onclick="history.back()" class="">
+                        Submit
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

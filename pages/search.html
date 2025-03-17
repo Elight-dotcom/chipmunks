@@ -19,18 +19,25 @@
         }
     </style>
 </head>
-<body style="font-family: Poppins;" class="overflow-x-hidden overflow-y-auto">
-    <header class="hidden mx-auto top-0 pt-5 px-4 py-5 md:flex justify-between items-center fixed sm:relative z-20 bg-[#F5EFF2] ">
+<body style="font-family: Poppins;" class="overflow-x-hidden overflow-y-auto bg-[#F5EFF2]">
+    <header class="hidden mx-auto top-0 pt-5 px-4 py-5 md:flex justify-between items-center fixed sm:relative z-20 bg-[#F5EFF2] border-b-2 border-primary">
         <div id="profile" class="flex items-center mr-16 cursor-pointer hover:font-bold">
-            <div href="#" class="bg-[#D9D9D9] rounded-full w-10 h-10 ml-5"></div>
+            <img src="../images/profile.png" class="bg-[#D9D9D9] rounded-full w-10 h-10 ml-5"></img>
             <p class="ml-3 text-primary">username</p>
         </div>
         <div class="flex items-center">
-            <div class="text-2xl font-bold">
-                <span class="text-primary">chipmunks</span>
+            <div class="flex items-center text-2xl font-bold gap-2">
+                <img class="w-10 h-auto" src="../images/logo.png" alt="">
+                <span class="text-primary">teamsync.</span>
             </div>
         </div>
 
+        <div class="flex flex-col md:flex-row items-center space-x-4 mr-5">
+            <div id="notification" class="cursor-pointer text-primary hover:text-primary-light hover:scale-120 duration-300"><i class="fa-solid fa-bell"></i></div>
+            <a class="cursor-pointer text-primary hover:text-primary-light hover:scale-120 duration-300" href="search.html"><i class="fa-solid fa-magnifying-glass text-primary"></i></a>
+        </div>
+        
+        <!-- profile desktop -->
         <div id="profile-pop" class="absolute top-15 left-17 backdrop-blur-md bg-[#F5EFF25050] border-0 rounded-b-2xl hidden">
             <div class="w-60 p-5 space-y-0">
                 <h1 class="text-md font-bold border-b-2 text-primary border-primary">Username</h1>
@@ -42,34 +49,34 @@
                 </div>
             </div>
         </div>
-    
-        <div class="flex flex-col md:flex-row items-center space-x-4 mr-5">
-            <div id="notification" class="cursor-pointer text-primary hover:text-primary-light hover:scale-120 duration-300"><i class="fa-solid fa-bell"></i></div>
-            <a class="cursor-pointer text-primary hover:text-primary-light hover:scale-120 duration-300" href="search.html"><i class="fa-solid fa-magnifying-glass text-primary"></i></a>
-        </div>
-
-        <div id="notif" class="hidden absolute top-20 right-10 bg-primary-dull border-0 rounded-b-2xl">
+        
+        <!-- notif desktop -->
+        <div id="notif" class="hidden absolute top-22 right-10 bg-primary-dull border-2 border-primary rounded-b-2xl">
             <div class="w-60 p-5 space-y-4">
                 <h1 class="text-xl font-bold border-b-2 text-primary border-primary">Notification</h1>
                 <div class=" border-primary border-b-2">
-                    <span class="font-bold text-sm">Notification Name</span><br>
-                    <span class="text-[10px] flex mt-2">Lorem Ipsum dolor sit amet Lorem Ipsum dolor sit amet Lorem Ipsum dolor sit amet Lorem Ipsum dolor sit amet</span>
+                    <span class="font-bold text-sm">Recruitment</span><br>
+                    <span class="text-[10px] flex">You're invited to join "Tim Halilintar". They waiting for your response</span>
                 </div>
                 <div class=" border-primary border-b-2">
-                    <span class="font-bold text-sm">Notification Name</span><br>
-                    <span class="text-[10px] flex mt-2">Lorem Ipsum dolor sit amet Lorem Ipsum dolor sit amet Lorem Ipsum dolor sit amet Lorem Ipsum dolor sit amet</span>
+                    <span class="font-bold text-sm">Nine Golrys</span><br>
+                    <span class="text-[10px] flex">"Nine Glorys" added new project. Please check it.</span>
                 </div>
                 <div class=" border-primary border-b-2">
-                    <span class="font-bold text-sm">Notification Name</span><br>
-                    <span class="text-[10px] flex mt-2">Lorem Ipsum dolor sit amet Lorem Ipsum dolor sit amet Lorem Ipsum dolor sit amet Lorem Ipsum dolor sit amet</span>
+                    <span class="font-bold text-sm">Sad News</span><br>
+                    <span class="text-[10px] flex">Your application to join "chipmunks" has been denied. Better luck next time</span>
                 </div>
             </div>
         </div>
     </header>
     <main class="flex flex-row">
         <!-- menu desktop -->
-        <div class="fixed hidden h-full md:block pt-10 top-0 bottom-0 lg:left-0 p-2 w-[300px] overflow-y-auto overflow-x-hidden text-center bg-[#F5EFF2]">
-            <h1 class="font-bold text-primary text-[25px]">chipmunks</h1>
+        <div class="fixed hidden h-full md:block pt-8 top-0 bottom-0 lg:left-0 p-2 w-[300px] overflow-y-auto overflow-x-hidden text-center bg-[#F5EFF2] border-r-2 border-primary">
+            <div class="flex items-center text-2xl font-bold gap-2">
+                <img class="w-10 h-auto" src="../images/logo.png" alt="">
+                <span class="text-primary">teamsync.</span>
+            </div>
+            <hr class="my-2 text-gray-600">
             <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
                 <i class="fa-solid fa-user"></i>
                 <a href="profil.html" class="text-[15px] ml-4">Profil</a>
@@ -88,7 +95,7 @@
             </div>
             <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
                 <i class="fa-solid fa-comment"></i>
-                <a href="message.html" class="text-[15px] ml-4">Messages</a>
+                <a href="message.html" class="text-[15px] ml-4 font-black underline">Messages</a>
             </div>
             <a href="upload.html" class="absolute bottom-10 left-10 w-30 p-2.5 flex items-center rounded-md px-4 duration-300 bg-secondary-light hover:scale-110 hover:bg-secondary text-white cursor-pointer">
                 <i class="fa-solid fa-plus"></i>
@@ -96,20 +103,23 @@
             </a>
         </div>
         
-        <div class="fixed top-0 w-full md:hidden bg-[#F5EFF2] backdrop-blur-2xl">
+        <!-- toogle mobile -->
+        <div class="fixed top-0 w-full md:hidden bg-[#F5EFF2] backdrop-blur-2xl flex items-center border-b-2 border-primary">
             <button class="text-primary m-8" id="menuToggle">
                 <i class="fas fa-bars text-xl"></i>
             </button>
-            <a href="#" class="text-2xl font-bold">
-                <span class="text-primary">chipmunks</span>
-            </a>
+            <div class="flex items-center text-2xl font-bold gap-2">
+                <img class="w-10 h-auto" src="../images/logo.png" alt="">
+                <span class="text-primary">teamsync.</span>
+            </div>
         </div>
         
         <!-- menu mobile -->
         <div class="hidden md:hidden fixed md:top-20 top-0 bottom-0 lg:left-0 p-2 w-[300px] overflow-y-auto overflow-x-hidden text-center bg-[#F5EFF250] backdrop-blur-md" id="mobileMenu">
             <div class="text-gray-100 text-xl">
-                <div class="p-2.5 mt-1 flex items-center">
-                    <h1 class="font-bold text-primary text-[25px] ml-3">chipmunks</h1>
+                <div class="flex items-center text-2xl font-bold gap-2">
+                    <img class="w-10 h-auto" src="../images/logo.png" alt="">
+                    <span class="text-primary">teamsync.</span>
                 </div>
                 <hr class="my-2 text-gray-600">
             </div>
@@ -153,34 +163,31 @@
             </div>
         </div>
         
-        <div id="notifMobilePop" class="hidden absolute top-32 left-40 backdrop-blur-md bg-[#F5EFF25050] border-0 rounded-r-2xl">
+        <!-- notif mobile -->
+        <div id="notifMobilePop" class="hidden absolute top-32 left-40 backdrop-blur-xl bg-[#F5EFF250] border-0 rounded-r-2xl">
             <div class="w-60 p-5 space-y-4">
                 <h1 class="text-xl font-bold border-b-2 text-primary border-primary">Notification</h1>
                 <div class=" border-primary border-b-2">
-                    <span class="font-bold text-sm">Notification Name</span><br>
-                    <span class="text-[10px] flex mt-2">Lorem Ipsum dolor sit amet Lorem Ipsum dolor sit amet Lorem Ipsum dolor sit amet Lorem Ipsum dolor sit amet</span>
+                    <span class="font-bold text-sm">Recruitment</span><br>
+                    <span class="text-[10px] flex">You're invited to join "Tim Halilintar". They waiting for your response</span>
                 </div>
                 <div class=" border-primary border-b-2">
-                    <span class="font-bold text-sm">Notification Name</span><br>
-                    <span class="text-[10px] flex mt-2">Lorem Ipsum dolor sit amet Lorem Ipsum dolor sit amet Lorem Ipsum dolor sit amet Lorem Ipsum dolor sit amet</span>
+                    <span class="font-bold text-sm">Nine Golrys</span><br>
+                    <span class="text-[10px] flex">"Nine Glorys" added new project. Please check it.</span>
                 </div>
                 <div class=" border-primary border-b-2">
-                    <span class="font-bold text-sm">Notification Name</span><br>
-                    <span class="text-[10px] flex mt-2">Lorem Ipsum dolor sit amet Lorem Ipsum dolor sit amet Lorem Ipsum dolor sit amet Lorem Ipsum dolor sit amet</span>
+                    <span class="font-bold text-sm">Sad News</span><br>
+                    <span class="text-[10px] flex">Your application to join "chipmunks" has been denied. Better luck next time</span>
                 </div>
             </div>
         </div>
-        <div id="profileMobilePop" class="hidden absolute bottom-52 left-40 backdrop-blur-md bg-[#F5EFF25050] border-0 rounded-r-2xl">
+
+        <!-- profile mobile -->
+        <div id="profileMobilePop" class="hidden absolute bottom-52 left-40 backdrop-blur-xl bg-[#F5EFF250] border-0 rounded-r-2xl">
             <div class="w-60 p-5 space-y-0">
                 <h1 class="text-md font-bold border-b-2 text-primary border-primary">Username</h1>
                 <div class="p-1 flex items-center mt-3 rounded-md px-0 duration-300 hover:bg-[#D9D9D9] text-primary cursor-pointer">
                     <a href="account.html" class="text-sm ml-2">Account</a>
-                </div>
-                <div class="p-1 flex items-center rounded-md px-0 duration-300 hover:bg-[#D9D9D9] text-primary cursor-pointer">
-                    <a href="friends.html" class="text-sm ml-2">Friends</a>
-                </div>
-                <div class="p-1 flex items-center rounded-md px-0 duration-300 hover:bg-[#D9D9D9] text-primary cursor-pointer">
-                    <a href="activity.html" class="text-sm ml-2">Activity</a>
                 </div>
                 <div class="p-1 flex items-center rounded-md mt-7 px-0 duration-300 hover:bg-red-500 hover:text-white text-primary cursor-pointer">
                     <a href="../index.html" class="text-sm ml-2">Logout</a>
@@ -207,28 +214,45 @@
                     <div class="mt-5 space-y-4">
                         <div class="flex items-center cursor-pointer">
                             <img class="w-13 h-13 rounded-full" src="../images/profile.png">
-                            <span class="font-semibold text-secondary ml-5">username</span>
-                            <span class="font-light text-sm text-secondary ml-2 hidden lg:block">Display Name</span>
+                            <div class="flex lg:flex-col xl:flex-row">
+                                <span class="font-semibold text-secondary ml-5">username</span>
+                                <span class="font-light text-sm text-secondary mt-1 xl:ml-2 lg:ml-5 hidden lg:block">Display Name</span>
+                            </div>
                         </div>
                         <div class="flex items-center cursor-pointer">
                             <img class="w-13 h-13 rounded-full" src="../images/profile.png">
-                            <span class="font-semibold text-secondary ml-5">username</span>
-                            <span class="font-light text-sm text-secondary ml-2 hidden lg:block">Display Name</span>
+                            <div class="flex lg:flex-col xl:flex-row">
+                                <span class="font-semibold text-secondary ml-5">username</span>
+                                <span class="font-light text-sm text-secondary mt-1 xl:ml-2 lg:ml-5 hidden lg:block">Display Name</span>
+                            </div>
                         </div>
                         <div class="flex items-center cursor-pointer">
                             <img class="w-13 h-13 rounded-full" src="../images/profile.png">
-                            <span class="font-semibold text-secondary ml-5">username</span>
-                            <span class="font-light text-sm text-secondary ml-2 hidden lg:block">Display Name</span>
+                            <div class="flex lg:flex-col xl:flex-row">
+                                <span class="font-semibold text-secondary ml-5">username</span>
+                                <span class="font-light text-sm text-secondary mt-1 xl:ml-2 lg:ml-5 hidden lg:block">Display Name</span>
+                            </div>
                         </div>
                         <div class="flex items-center cursor-pointer">
                             <img class="w-13 h-13 rounded-full" src="../images/profile.png">
-                            <span class="font-semibold text-secondary ml-5">username</span>
-                            <span class="font-light text-sm text-secondary ml-2 hidden lg:block">Display Name</span>
+                            <div class="flex lg:flex-col xl:flex-row">
+                                <span class="font-semibold text-secondary ml-5">username</span>
+                                <span class="font-light text-sm text-secondary mt-1 xl:ml-2 lg:ml-5 hidden lg:block">Display Name</span>
+                            </div>
                         </div>
                         <div class="flex items-center cursor-pointer">
                             <img class="w-13 h-13 rounded-full" src="../images/profile.png">
-                            <span class="font-semibold text-secondary ml-5">username</span>
-                            <span class="font-light text-sm text-secondary ml-2 hidden lg:block">Display Name</span>
+                            <div class="flex lg:flex-col xl:flex-row">
+                                <span class="font-semibold text-secondary ml-5">username</span>
+                                <span class="font-light text-sm text-secondary mt-1 xl:ml-2 lg:ml-5 hidden lg:block">Display Name</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center cursor-pointer">
+                            <img class="w-13 h-13 rounded-full" src="../images/profile.png">
+                            <div class="flex lg:flex-col xl:flex-row">
+                                <span class="font-semibold text-secondary ml-5">username</span>
+                                <span class="font-light text-sm text-secondary mt-1 xl:ml-2 lg:ml-5 hidden lg:block">Display Name</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -241,7 +265,7 @@
                             </svg>
                         </a>
                     </div>
-                    <div class="grid grid-cols-3 gap-0">
+                    <div class="grid grid-cols-3 gap-2">
                         <div>
                             <img class="lg:w-40 lg:h-40 w-20 h-20 object-cover" src="../images/imgempty.jpg">
                         </div>
@@ -272,7 +296,7 @@
                     </div>
                 </div>
             </div>
-            <div class="mx-7 mt-8 flex flex-col gap-6">
+            <div class="ml-5 mt-8 flex flex-col gap-6">
                 <div class="flex flex-wrap items-center space-x-2">
                     <span class="font-bold text-secondary">Teams</span>
                     <a href="">
@@ -281,7 +305,7 @@
                         </svg>
                     </a>
                 </div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 space-x-5">
+                <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 space-x-3">
                     <div class="p-2.5 w-70 mt-3 flex flex-col rounded-4xl px-4 duration-300 bg-secondary-light text-black  space-y-4">
                         <h1 class="text-xl font-black mt-5">Team's Name</h1>
                         <span>Lorem Ipsum dolor sit amet</span>
