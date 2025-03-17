@@ -50,7 +50,7 @@
         </div>
         
         <!-- notif desktop -->
-        <div id="notif" class="hidden absolute top-22 right-10 bg-primary-dull border-2 border-primary rounded-b-2xl">
+        <div id="notif" class="hidden absolute top-22 right-10 bg-[#F5EFF2] border-2 border-primary rounded-b-2xl">
             <div class="w-60 p-5 space-y-4">
                 <h1 class="text-xl font-bold border-b-2 text-primary border-primary">Notification</h1>
                 <div class=" border-primary border-b-2">
@@ -223,45 +223,21 @@
                 <div class="mt-5 left-0 right-0 w-fit mx-auto md:ml-0 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-between gap-4">
                     <div class="w-50">
                         <img class="w-50 h-50" src="../images/imgempty.jpg" alt="">
-                        <div class="mt-2">
-                            <h1 class="text-lg font-bold text-secondary">Title</h1>
-                            <span class="font-light text-sm text-secondary">Lorem ipsum dolor sit amet consectetur adipiscing elit</span>
-                        </div>
                     </div>
                     <div class="w-50">
                         <img class="w-50 h-50" src="../images/imgempty.jpg" alt="">
-                        <div class="mt-2">
-                            <h1 class="text-lg font-bold text-secondary">Title</h1>
-                            <span class="font-light text-sm text-secondary">Lorem ipsum dolor sit amet consectetur adipiscing elit</span>
-                        </div>
                     </div>
                     <div class="w-50">
                         <img class="w-50 h-50" src="../images/imgempty.jpg" alt="">
-                        <div class="mt-2">
-                            <h1 class="text-lg font-bold text-secondary">Title</h1>
-                            <span class="font-light text-sm text-secondary">Lorem ipsum dolor sit amet consectetur adipiscing elit</span>
-                        </div>
                     </div>
                     <div class="w-50">
                         <img class="w-50 h-50" src="../images/imgempty.jpg" alt="">
-                        <div class="mt-2">
-                            <h1 class="text-lg font-bold text-secondary">Title</h1>
-                            <span class="font-light text-sm text-secondary">Lorem ipsum dolor sit amet consectetur adipiscing elit</span>
-                        </div>
                     </div>
                     <div class="w-50">
                         <img class="w-50 h-50" src="../images/imgempty.jpg" alt="">
-                        <div class="mt-2">
-                            <h1 class="text-lg font-bold text-secondary">Title</h1>
-                            <span class="font-light text-sm text-secondary">Lorem ipsum dolor sit amet consectetur adipiscing elit</span>
-                        </div>
                     </div>
                     <div class="w-50">
                         <img class="w-50 h-50" src="../images/imgempty.jpg" alt="">
-                        <div class="mt-2">
-                            <h1 class="text-lg font-bold text-secondary">Title</h1>
-                            <span class="font-light text-sm text-secondary">Lorem ipsum dolor sit amet consectetur adipiscing elit</span>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -347,7 +323,18 @@
             </div>
         </div>
     </main>
-    <div class="fixed bottom-10 right-10 w-15 h-15 border-0 rounded-2xl flex justify-center items-center bg-[#F099BF] hover:bg-[#f5a6c9] hover:scale-110 duration-300 cursor-pointer">
+    <div id="up-profile" class="hidden">
+        <div id="skill" class="fixed bottom-53 right-10 w-10 h-10 rounded-2xl flex justify-center items-center bg-[#fff] border-2 border-primary hover:scale-110 duration-300 cursor-pointer">
+            <img width="25px" height="25px" src="../images/ability.png" id="skillTextP" class="text-xl text-white"></img><span id="skillText" class="hidden text-md text-primary">Skills</span>
+        </div>
+        <div id="experience" class="fixed bottom-40 right-10 w-10 h-10 rounded-2xl flex justify-center items-center bg-[#fff] border-2 border-primary hover:scale-110 duration-300 cursor-pointer">
+            <img width="25px" height="25px" src="../images/experience.png" id="experienceTextP" class="text-xl text-white"></img><span id="experienceText" class="hidden text-md text-primary">Experience</span>
+        </div>
+        <div id="activity" class="fixed bottom-27 right-10 w-10 h-10 rounded-2xl flex justify-center items-center bg-[#fff] border-2 border-primary  hover:scale-110 duration-300 cursor-pointer">
+            <img width="25px" height="25px" src="../images/Activity.png" id="activityTextP" class="text-xl text-white"></img><span id="activityText" class="hidden text-md text-primary">Activity</span>
+        </div>
+    </div>
+    <div id="toogle-up" class="fixed bottom-10 right-10 w-15 h-15 border-0 rounded-2xl flex justify-center items-center bg-[#F099BF] hover:bg-[#f5a6c9] hover:scale-110 duration-300 cursor-pointer">
         <i class="fa-regular fa-pen-to-square text-3xl text-white"></i>
     </div>
     <script>
@@ -362,6 +349,61 @@
             const notifMobilePop = document.getElementById('notifMobilePop');
             const profileMobile = document.getElementById('profileMobile');
             const profileMobilePop = document.getElementById('profileMobilePop');
+            const toogleActivity = document.getElementById('activity');
+            const toogleActivityP = document.getElementById('activityTextP');
+            const toogleActivityText = document.getElementById('activityText');
+            const toogleSkill = document.getElementById('skill');
+            const toogleSkillP = document.getElementById('skillTextP');
+            const toogleSkillText = document.getElementById('skillText');
+            const toogleExperience = document.getElementById('experience');
+            const toogleExperienceP = document.getElementById('experienceTextP');
+            const toogleExperienceText = document.getElementById('experienceText');
+            const toogleUp = document.getElementById('toogle-up');
+            const upProfile = document.getElementById('up-profile');
+
+            toogleUp.addEventListener('click', function() {
+                upProfile.classList.toggle('hidden');
+            });
+
+            // Menutup menu saat mengklik di luar menu
+            document.addEventListener('click', function(event) {
+                if (!toogleUp.contains(event.target) && !upProfile.contains(event.target)) {
+                    upProfile.classList.add('hidden');
+                }
+            });
+
+            toogleSkill.addEventListener('mouseenter', function() {
+                toogleSkillP.classList.add('hidden');
+                toogleSkillText.classList.remove('hidden');
+                toogleSkill.classList.replace('w-10', 'w-15');
+            });
+            toogleSkill.addEventListener('mouseleave', function() {
+                toogleSkillText.classList.add('hidden');
+                toogleSkillP.classList.remove('hidden');
+                toogleSkill.classList.replace('w-15', 'w-10');
+            });
+
+            toogleExperience.addEventListener('mouseenter', function() {    
+                toogleExperienceP.classList.add('hidden');
+                toogleExperienceText.classList.remove('hidden');
+                toogleExperience.classList.replace('w-10', 'w-27');
+            });
+            toogleExperience.addEventListener('mouseleave', function() {
+                toogleExperienceText.classList.add('hidden');
+                toogleExperienceP.classList.remove('hidden');
+                toogleExperience.classList.replace('w-27', 'w-10');
+            });
+
+            toogleActivity.addEventListener('mouseenter', function() {
+                toogleActivityP.classList.add('hidden');
+                toogleActivityText.classList.remove('hidden');
+                toogleActivity.classList.replace('w-10', 'w-20');
+            });
+            toogleActivity.addEventListener('mouseleave', function() {
+                toogleActivityText.classList.add('hidden');
+                toogleActivityP.classList.remove('hidden');
+                toogleActivity.classList.replace('w-20', 'w-10');
+            });
             
             menuToggle.addEventListener('click', function() {
                 mobileMenu.classList.toggle('hidden');
